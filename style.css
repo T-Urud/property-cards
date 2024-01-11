@@ -1,0 +1,119 @@
+@font-face {
+  font-family:"Fira" ;
+  src: url(./fonts/fira/FiraSans-Regular.ttf);
+}
+
+:root{
+  --card-back : #FFFFFF;
+  --like: #EF1111;
+  --txt:#262626;
+  --background:#fff3f894;
+  --grey:#999999;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background: var(--background);
+  padding: 1rem;
+  font-family: "Fira",sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--txt);
+}
+
+.card{
+  background: var(--card-back);
+  border-radius: 1.5rem;
+  width: 22rem;
+  height: 25rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
+}
+.card:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px 6px;
+  transform: scale(1.003);
+}
+
+.card-preview{
+  position: relative;
+  height: 12rem;
+}
+.card-preview img{
+  width: 100%;
+  border-radius: 1.5rem 1.5rem 0 0;
+  object-fit: cover;
+}
+.price-tag{
+  position: absolute;
+  background: var(--card-back);
+  top: 10rem;
+  left: 1rem;
+  padding: 0.2rem 0.4rem;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+.general-infos{
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+.title-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h2{
+  font-size: 1.2rem;
+  letter-spacing: 0.03rem;
+}
+.title-container i:hover{
+  transform: scale(1.2);
+  background: none ;
+}
+.address{
+  padding: 0.2rem 0 0.5rem;
+}
+.description{
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+}
+.down-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.7rem;
+  color: var(--grey);
+}
+.like-btn{
+  background: none;
+  border: none;
+}
+.like-btn{
+  font-size: 1.3rem;
+  transition: 0.2s;
+  cursor: pointer;
+} 
+.like-btn svg{
+  background: none;
+  height: 1.2rem;
+  width: 1.2rem;
+  stroke: var(--txt);
+}
+.like-btn svg:hover{
+  transform: scale(1.2);
+  transition: 0.2s ease-out;
+}
+.liked svg{
+  fill: var(--like);
+  stroke: var(--like);
+}
