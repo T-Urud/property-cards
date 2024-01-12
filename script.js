@@ -1,5 +1,7 @@
-const like = document.querySelector(".like-btn");
+const like = document.querySelectorAll(".like-btn");
 
-like.addEventListener("click", () => {
-  like.classList.toggle("liked");
+like.forEach((likes) => {
+  likes.addEventListener("click", () => {
+    likes.classList.toggle("liked");
+  });
 });
